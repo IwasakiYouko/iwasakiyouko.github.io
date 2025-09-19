@@ -1,6 +1,19 @@
-#                              Haruki Proxy 简易使用教程
+# HarukiProxy 介绍与教程
 
-**本软件支持日/台/韩/国际服数据抓取**
+## 什么是HarukiProxy
+HarukiProxy是由*Haruki Dev Team*开发的一款Android平台**半自动**抓取游戏pjsk的数据的程序
+
+## HarukiProxy的特点
+- 支持`日服`、`台服`、`韩服`、`国际服`数据抓取
+- 支持**自动上传数据**到Haruki工具箱
+- 支持选择是否公开自己自动上传到Haruki工具箱的数据在公开API访问
+- 支持自定义上传数据端点 (需第三方服务支持)
+- 支持保存抓取的数据到本地
+- 支持保存抓取的suite数据到本地
+- 支持保存抓取的mysekai数据到本地
+- 支持自动为**MuMu模拟器**或其他可Root和可写系统盘的Android设备/模拟器安装MitM证书
+- 支持自动为Android设备设置HarukiProxy为代理
+- 支持自定义上游HTTP代理
 
 ## **初期准备**
 
@@ -10,10 +23,10 @@
 
 根据你的系统，选择并下载最新版的HarukiProxy
 
-- [HarukiProxy-Windows](/HarukiProxy/HarukiProxy-v1.2.0-windows-x64.zip)
-- [HarukiProxy-Linux-amd64](/HarukiProxy/HarukiProxy-v1.2.0-linux-amd64.tar.gz)
-- [HarukiProxy-Linux-arm64](/HarukiProxy/HarukiProxy-v1.2.0-linux-arm64.tar.gz)
-- [HarukiProxy-macOS-arm64](/HarukiProxy/HarukiProxy-v1.2.0-macos-arm64.tar.gz)
+- [HarukiProxy-Windows](/HarukiProxy/HarukiProxy-v1.4.0-windows-x64.zip)
+- [HarukiProxy-Linux-amd64](/HarukiProxy/HarukiProxy-v1.4.0-linux-amd64.tar.gz)
+- [HarukiProxy-Linux-arm64](/HarukiProxy/HarukiProxy-v1.4.0-linux-arm64.tar.gz)
+- [HarukiProxy-macOS-arm64](/HarukiProxy/HarukiProxy-v1.4.0-macos-arm64.tar.gz)
 
 下载完成后，将压缩包放至自己喜欢的目录，然后进行解压
 
@@ -229,3 +242,26 @@ adb -s 127.0.0.1:16384 shell settings put global http_proxy :0
 之后重启模拟器
 
 即可恢复网络
+
+## HarukiProxy 更新记录
+
+### v1.4.0
+- 新增是否自动上传到Haruki Toolbox
+- 新增自定义上传数据端点
+- 新增是否保存数据到本地
+- 新增是否保存suite数据到本地
+- 新增是否保存mysekai数据到本地
+- 新增是否自动通过adb安装证书
+
+### v1.2.0
+- 为生成Root CA时的CA名字添加随机参数
+- 退出程序时自动清理adb设备的代理
+
+### v1.1.1
+- 添加Haruki声明
+
+### v1.1.0
+- 改善获取内网IP的逻辑
+
+### v1.0.0
+- 初版
