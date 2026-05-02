@@ -131,6 +131,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 | `/查bpm` `/pjsk bpm` `/查BPM`                                                                             | 查询指定BPM下有哪些歌曲                                  |
 | `/查曲绘`  `/pjsk music cover` `/曲绘`                                                                       | 查询指定歌曲的曲绘原图                                    |
 | `/歌曲排行`                                                                                               | 查询指定顺序下的歌曲排行                                    |
+| `/歌曲meta`                                                                                              | 查询歌曲在各个模式下的效率【数据来源：33kit】                       |
 
 <details>
 <summary><span style="color:#99CCFF">乐曲相关的可选参数以及示例可以点击这条展开查看</span></summary>
@@ -159,6 +160,10 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 
 - 模式：`单人` `多人` `AUTO`
 - 排序条件：`分数` `PT` `时速`
+
+### 歌曲meta示例：
+
+- `/歌曲meta 西八八西`
 
 </details>
 
@@ -208,6 +213,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 | `/sk预测` `/pjsk sk predict` `/榜线预测` `/skp`                        | 查询榜线预测（33kit/moesekai/sekarun，暂不支持WL单榜） |
 | `/5v5预测` `/pjsk winrate predict` `/胜率预测` `/胜率` `/预测胜率`           | 查询5v5 胜率                                |
 | `/csb`                                                           | 查询指定排名的热力图数据                            |
+| `/倍率` `/实效`                                                      | 查询倍率/实效                                 |
 
 <details>
 <summary><span style="color:#99CCFF">榜线相关的可选参数以及示例可以点击这条展开查看</span></summary>
@@ -215,6 +221,11 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 `/时速`、`/半日速`、`/日速`指令后面可以跟数字，将特定时间范围内的PT增长转换为对应速度  
 如`/时速10` = 10分钟内PT增长量转换的时速  
 可输入数字单位为分钟，最大不超过1440分钟(即一天)
+
+### 倍率/实效示例：
+
+- `/实效 100 100 100 100 100`
+
 </details>
 
 ## suite相关查询
