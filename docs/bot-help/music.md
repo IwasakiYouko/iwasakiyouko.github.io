@@ -21,6 +21,16 @@ const kuroba = [
   { text: '[id为112的歌曲的谱面预览]', from: 'bot'}
 ]
 
+const customScore = [
+  { text: '/jp谱面预览 _g5yakrvqobnfq6hafdob7ed8jwm', from: 'user' },
+  { text: '[指定自定义谱面的谱面预览]', from: 'bot'}
+]
+
+const customScoreDetail = [
+  { text: '/jp查曲 _g5yakrvqobnfq6hafdob7ed8jwm', from: 'user' },
+  { text: '[指定自定义谱面的详情信息]', from: 'bot'}
+]
+
 const reward = [
   { text: '/打歌奖励', from: 'user' },
   { text: '[当前账户的歌曲剩余奖励]', from: 'bot'}
@@ -47,11 +57,11 @@ const weee = [
 ## 基本指令
 
 - `/查曲` `/查歌` `/查乐` `/查音乐` `/查询乐曲` `/查歌曲` `/歌曲` `/乐曲` `/song` `/music`
-  - 查询单曲信息。
+  - 查询单曲信息。传入自定义谱面 ID 时会查询自定义谱面详情。
 - `/难度排行` `/歌曲列表` `/歌曲一览` `/乐曲列表` `/乐曲一览` `/定数表` `/歌曲定数` `/查乐曲` `/music-list` `/pjsk music list`
   - 查询指定难度等级下的歌曲列表，如果有抓包上传的 suite 数据会显示 clear/fc/ap 进度。
 - `/谱面预览` `/pjsk chart` `/谱面查询` `/铺面查询` `/铺面预览` `/谱面` `/铺面` `/查谱面` `/查铺面` `/查谱` `/技能预览`
-  - 查询指定歌曲的谱面预览。
+  - 查询指定歌曲的谱面预览。传入自定义谱面 ID 时会查询自定义谱面预览。
 - `/谱面样式` `/谱面底色` `/设置谱面样式` `/设置谱面底色` `/pjsk chart style`
   - 指定查询谱面预览时对应的色调（可选 `white`/`black`）。
 - `/打歌奖励` `/曲目奖励` `/歌曲奖励` `/music rewards` `/music-rewards` `/pjsk music rewards` `/歌曲挖矿` `/打歌挖矿`
@@ -61,7 +71,7 @@ const weee = [
 - `/查物量` `/pjsk note num` `/pjsk note count` `/物量`
   - 查询指定物量下有哪些歌曲,如果只有一首曲目会返回谱面预览。
 - `/查bpm` `/pjsk bpm` `/查BPM`
-  - 查询指定 BPM 下有哪些歌曲。
+  - 查询指定 BPM 下有哪些歌曲；即使只匹配到单首歌曲，也不会自动返回谱面预览。
 - `/查曲绘` `/pjsk music cover` `/曲绘`
   - 查询指定歌曲的曲绘原图。
 - `/歌曲排行`
@@ -95,6 +105,13 @@ const weee = [
 - 模式：`单人` `多人` `AUTO`
 - 排序条件：`分数` `PT` `时速`
 
+### 自定义谱面相关
+
+- 目前自定义谱面仅支持日服数据源。如果默认绑定不是日服，请使用 `/jp` 前缀，例如 `/jp谱面预览 <28位ID>`。
+- 自定义谱面参数必须是单独的 28 位自定义谱面 ID，不需要加歌曲名、难度或文字前缀。
+- `/谱面预览` 会渲染自定义谱面预览；`/查曲` 会展示原曲、自定义谱面标题、作者、难度、物量、BPM、标签等详情；`/技能预览` 也可以搭配自定义谱面 ID 使用。
+- 只支持已发布的自定义谱面。ID 错误、未发布或区服不支持时会返回对应错误提示。
+
 ## 指令示例
 <div class="chatbox-grid">
 <ChatBox :messages="musicdetail" />
@@ -102,6 +119,10 @@ const weee = [
 <ChatBox :messages="musichard" />
 
 <ChatBox :messages="kuroba" />
+
+<ChatBox :messages="customScore" />
+
+<ChatBox :messages="customScoreDetail" />
 
 <ChatBox :messages="reward" />
 
