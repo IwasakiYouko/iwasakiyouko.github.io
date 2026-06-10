@@ -40,17 +40,32 @@ const msg = [
   { text: '/msg mmj' , from: 'user'},
   { text: '[升级more more jump的大门所需的每级材料的列表]' , from: 'bot' }
 ]
+
+const bjsk = [
+  { text: '/bjsk 1-5', from: 'user' },
+  { text: '[当前烤森百景 1 到 5 名的投稿、评价数和前后差距]', from: 'bot' }
+]
 </script>
 
 # MySekai 相关查询
 
 ::: info
-部分功能需要在Haruki工具箱绑定并上传数据之后才能正常使用
+除烤森百景 SK 外，部分功能需要在Haruki工具箱绑定并上传数据之后才能正常使用
 :::
 
-> ⚠️ **所有 MySekai 指令需用户绑定 Haruki工具箱 账号**
-> 
-> ⚠️ **本功能不支持国服**
+> ⚠️ **除烤森百景 SK 外，MySekai 查询需用户绑定 Haruki工具箱账号并上传 MySekai 数据**
+>
+> ⚠️ **普通 MySekai 查询暂不支持国服；烤森百景 SK 可使用 `/cn` 前缀查询国服**
+
+## 查询烤森百景
+
+- `/百景sk` `/烤森百景sk` `/mysekai-housing-sk` `/mshsk` `/bjsk`
+  - 查询当前进行中烤森百景的投稿排名线，返回指定名次的投稿缩略图、评价数以及与前后一名的差距。
+  - 不填参数时默认查询 `1-5` 名；可以写单个名次、逗号分隔或范围，如 `/bjsk 1`、`/bjsk 1,3,5`、`/bjsk 10-14`。一次最多查询 5 个名次。
+  - 可用 `id=<housing_id>` 查询指定百景，如 `/bjsk id=25 1-5`；也支持 `/bjsk 25 1-5` 的简写。
+  - 可用区服前缀指定服务器，如 `/jpbjsk 1-5`、`/cnbjsk 1-5`。
+  - 高级参数一般无需填写：`sample=2` 可指定采样次数，`interval=1000` 可指定多次采样间隔（毫秒）。
+  - 结果基于采样统计，仅供参考。
 
 ## 查询烤森资源
 
@@ -100,4 +115,6 @@ const msg = [
 <ChatBox :messages="msp" />
 
 <ChatBox :messages="msg" />
+
+<ChatBox :messages="bjsk" />
 </div>
