@@ -18,7 +18,13 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 
 >
 > 本文档将引导您使用 HarukiBot NEO
+> 
+> 本文档分为多个章节 可以在左上角展开目录前往对应章节查看（或善用搜索框）
 >
+
+> [!warning] 注意
+> 
+> 虽然这一章节没有具体功能介绍，但也能解决很多使用问题（例如官方机器人数据不统一、抓包等），希望你能把本章节读完
 
 # 阅读前提示
 
@@ -38,6 +44,13 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 
 + 从HarukiBot NEO版本起，所有指令都需要带"/"（例"/绑定"），没有"/"的指令不会被响应。
 
+### 关于抓包
+
++ 部分需要抓包才能使用的功能bot会返回未上传提示，要抓包并到工具箱对应页面上传才能使用该类功能
++ Android 用户建议使用 [Haruki工具箱-上传MySekai数据](https://haruki.seiunx.com/upload_mysekai) 的 `继承码上传`
++ 无法使用引继码的 Android 用户教程参考 [Haruki工具箱-HarukiProxy使用教程](/haruki-proxy/)
++ iOS / iPadOS 用户建议使用代理工具 MitM 模块更新，教程参考 [Haruki工具箱-iOS模块上传数据教程](/toolbox-tutorial/ios-module)
+
 ### 关于QQ官方机器人
 
 + Haruki NEO也有部署为QQ官方机器人“宵崎奏”的分布式(以下简称为“宵崎奏”)，QQ号为2854202255。
@@ -56,6 +69,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 > 如您的全局默认绑定为cn服账号，则使用`/sk`等效以前的`/cnsk`
 
 + 部分功能不支持部分区服，会在功能内说明。
++ 默认为其他服的指令不能查到仅在日服实装的内容。
 
 
 ## 关于
@@ -65,7 +79,7 @@ Logo由[小沢翼](https://space.bilibili.com/3493133455198556)担当绘制
 + 联系开发团队: <haruki@seiunx.com>
 + wiki原作者：[綿菓子ウニ](https://space.bilibili.com/622551112)
 + 使用授权：[点击查看](https://images.shiromiku.moe/images/4f956d51aaa3d1b2f407d1922e397a42.jpg)
-+ wiki适配与编辑：[岩崎阳子](https://space.bilibili.com/11048929)、[Aposetles](https://space.bilibili.com/178748972)、[星雲希凪](https://github.com/MejiroRina)、[storyxy3](https://github.com/storyxy3)
++ wiki适配与编辑：[岩崎阳子](https://space.bilibili.com/11048929)、[Aposetles](https://space.bilibili.com/178748972)、[星雲希凪](https://github.com/MejiroRina)、[Deseer](https://github.com/Deseer)、[storyxy3](https://github.com/storyxy3)
 + 联系我：<admin@shiromiku.moe>或QQ：`57892198`
 + Logo画师：[小沢翼](https://space.bilibili.com/3493133455198556)
 

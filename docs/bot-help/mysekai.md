@@ -45,13 +45,7 @@ const msg = [
 # MySekai 相关查询
 
 ::: info
-这部分功能需要在Haruki工具箱绑定并上传数据之后才能正常使用
-
-Android 用户建议使用 [Haruki工具箱-上传MySekai数据](https://haruki.seiunx.com/upload_mysekai) 的 `继承码上传`
-
-无法使用引继码的 Android 用户教程参考 [Haruki工具箱-HarukiProxy使用教程](/haruki-proxy/)
-
-iOS / iPadOS 用户建议使用代理工具 MitM 模块更新，教程参考 [Haruki工具箱-iOS模块上传数据教程](/toolbox-tutorial/ios-module)
+部分功能需要在Haruki工具箱绑定并上传数据之后才能正常使用
 :::
 
 > ⚠️ **所有 MySekai 指令需用户绑定 Haruki工具箱 账号**
